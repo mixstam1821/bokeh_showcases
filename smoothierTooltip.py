@@ -1,3 +1,4 @@
+# https://discourse.bokeh.org/t/smoothier-tooltip/12452
 from bokeh.plotting import figure, show
 from bokeh.models import ColumnDataSource, CustomJS, HoverTool
 from bokeh.io import output_file
