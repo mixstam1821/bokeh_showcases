@@ -5,7 +5,7 @@
       <stop offset="100%" stop-color="deepskyblue"></stop>
     </radialGradient>
         <filter id="shadow" x="-20%" y="-20%" width="180%" height="180%">
-      <feDropShadow dx="18" dy="18" stdDeviation="8" flood-color="black" flood-opacity="0.25"></feDropShadow>
+      <feDropShadow dx="18" dy="18" stdDeviation="10" flood-color="black" flood-opacity="0.35"></feDropShadow>
     </filter>
   </defs>
   <circle cx="200" cy="200" r="180" fill="url(#sphereGradient)" filter="url(#shadow)"></circle>
