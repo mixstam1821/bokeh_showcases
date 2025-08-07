@@ -40,7 +40,7 @@ ds = xr.open_dataset('/home/michael/REtemperature_monthly-mean_era5_1979-2024_v1
 spatial_avg0 = ds.weighted(np.cos(np.deg2rad(ds.lat))).mean(( 'lat',"lon"))
 spatial_avg = spatial_avg0.groupby('time.month') - spatial_avg0.groupby('time.month').mean('time')
 
-# 3. Group by year, then for each year extract the 12 monthly values
+# Group by year, then for each year extract the 12 monthly values
 years = np.arange(1979, 2025)
 output = []
 
