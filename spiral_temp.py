@@ -34,7 +34,7 @@ for year in years:
 
 # === Load and process data ===
 
-
+# find the link to download the nc file in bokeh_showcases/assets0/tempera5.txt
 ds = xr.open_dataset('/home/michael/REtemperature_monthly-mean_era5_1979-2024_v1.0.nc')['temperature_monthly-mean']
 # ds = ds.sel(lat=slice(35, 72), lon=slice(-30, 50))
 spatial_avg0 = ds.weighted(np.cos(np.deg2rad(ds.lat))).mean(( 'lat',"lon"))
