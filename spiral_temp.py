@@ -1,3 +1,5 @@
+# see my original post: https://discourse.bokeh.org/t/a-radial-chart-with-an-animated-spiral/12548
+
 import numpy as np
 import pandas as pd
 from bokeh.plotting import figure, curdoc
