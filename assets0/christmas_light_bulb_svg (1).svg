@@ -1,0 +1,158 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" width="300" height="200">
+  <defs>
+    <!-- Enhanced glow filter -->
+    <filter id="glow" height="300%" width="300%" x="-75%" y="-75%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Strong outer glow -->
+    <filter id="outerGlow" height="400%" width="400%" x="-150%" y="-150%">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.6 0" result="softerGlow"/>
+      <feMerge>
+        <feMergeNode in="softerGlow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Glass reflection effect -->
+    <radialGradient id="glassShine">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.9" />
+      <stop offset="50%" style="stop-color:#ffffff;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0" />
+    </radialGradient>
+    
+    <!-- Bulb gradients with realistic depth -->
+    <radialGradient id="red" cx="35%" cy="25%">
+      <stop offset="0%" style="stop-color:#ff4757;stop-opacity:1" />
+      <stop offset="40%" style="stop-color:#ee5a6f;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c23616;stop-opacity:1" />
+    </radialGradient>
+    
+    <radialGradient id="yellow" cx="35%" cy="25%">
+      <stop offset="0%" style="stop-color:#ffd93d;stop-opacity:1" />
+      <stop offset="40%" style="stop-color:#ffed4e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f9ca24;stop-opacity:1" />
+    </radialGradient>
+    
+    <radialGradient id="blue" cx="35%" cy="25%">
+      <stop offset="0%" style="stop-color:#6dd5ed;stop-opacity:1" />
+      <stop offset="40%" style="stop-color:#4facfe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2e86de;stop-opacity:1" />
+    </radialGradient>
+    
+    <radialGradient id="green" cx="35%" cy="25%">
+      <stop offset="0%" style="stop-color:#7bed9f;stop-opacity:1" />
+      <stop offset="40%" style="stop-color:#6fd56c;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2ed573;stop-opacity:1" />
+    </radialGradient>
+    
+    <radialGradient id="orange" cx="35%" cy="25%">
+      <stop offset="0%" style="stop-color:#ffa801;stop-opacity:1" />
+      <stop offset="40%" style="stop-color:#ffb142;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff7f00;stop-opacity:1" />
+    </radialGradient>
+    
+    <radialGradient id="purple" cx="35%" cy="25%">
+      <stop offset="0%" style="stop-color:#d980fa;stop-opacity:1" />
+      <stop offset="40%" style="stop-color:#c56cf0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#9b59b6;stop-opacity:1" />
+    </radialGradient>
+    
+    <radialGradient id="pink" cx="35%" cy="25%">
+      <stop offset="0%" style="stop-color:#ff6b9d;stop-opacity:1" />
+      <stop offset="40%" style="stop-color:#ff85a1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e84393;stop-opacity:1" />
+    </radialGradient>
+    
+    <radialGradient id="cyan" cx="35%" cy="25%">
+      <stop offset="0%" style="stop-color:#48dbfb;stop-opacity:1" />
+      <stop offset="40%" style="stop-color:#54e3f5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0abde3;stop-opacity:1" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Wire/cable with thickness variation -->
+  <path d="M 5,80 Q 40,55 75,80 T 145,80 T 215,80 T 285,80" 
+        stroke="#1a1a1a" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <path d="M 5,80 Q 40,55 75,80 T 145,80 T 215,80 T 285,80" 
+        stroke="#2d3436" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.6"/>
+  
+  <!-- Bulb template with socket, glass, and glow -->
+  <!-- Red bulb -->
+  <g transform="translate(25, 75)" filter="url(#outerGlow)">
+    <ellipse cx="0" cy="5" rx="4" ry="4" fill="#2d3436"/>
+    <rect x="-5" y="3" width="10" height="5" rx="1" fill="#2d3436"/>
+    <ellipse cx="0" cy="30" rx="13" ry="20" fill="url(#red)" filter="url(#glow)"/>
+    <ellipse cx="-4" cy="22" rx="5" ry="9" fill="url(#glassShine)"/>
+    <path d="M -8,28 Q -6,24 -3,22" stroke="#ffffff" stroke-width="1.5" fill="none" opacity="0.7" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Yellow bulb -->
+  <g transform="translate(60, 50)" filter="url(#outerGlow)">
+    <ellipse cx="0" cy="5" rx="4" ry="4" fill="#2d3436"/>
+    <rect x="-5" y="3" width="10" height="5" rx="1" fill="#2d3436"/>
+    <ellipse cx="0" cy="30" rx="13" ry="20" fill="url(#yellow)" filter="url(#glow)"/>
+    <ellipse cx="-4" cy="22" rx="5" ry="9" fill="url(#glassShine)"/>
+    <path d="M -8,28 Q -6,24 -3,22" stroke="#ffffff" stroke-width="1.5" fill="none" opacity="0.7" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Blue bulb -->
+  <g transform="translate(95, 75)" filter="url(#outerGlow)">
+    <ellipse cx="0" cy="5" rx="4" ry="4" fill="#2d3436"/>
+    <rect x="-5" y="3" width="10" height="5" rx="1" fill="#2d3436"/>
+    <ellipse cx="0" cy="30" rx="13" ry="20" fill="url(#blue)" filter="url(#glow)"/>
+    <ellipse cx="-4" cy="22" rx="5" ry="9" fill="url(#glassShine)"/>
+    <path d="M -8,28 Q -6,24 -3,22" stroke="#ffffff" stroke-width="1.5" fill="none" opacity="0.7" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Green bulb -->
+  <g transform="translate(130, 50)" filter="url(#outerGlow)">
+    <ellipse cx="0" cy="5" rx="4" ry="4" fill="#2d3436"/>
+    <rect x="-5" y="3" width="10" height="5" rx="1" fill="#2d3436"/>
+    <ellipse cx="0" cy="30" rx="13" ry="20" fill="url(#green)" filter="url(#glow)"/>
+    <ellipse cx="-4" cy="22" rx="5" ry="9" fill="url(#glassShine)"/>
+    <path d="M -8,28 Q -6,24 -3,22" stroke="#ffffff" stroke-width="1.5" fill="none" opacity="0.7" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Orange bulb -->
+  <g transform="translate(165, 75)" filter="url(#outerGlow)">
+    <ellipse cx="0" cy="5" rx="4" ry="4" fill="#2d3436"/>
+    <rect x="-5" y="3" width="10" height="5" rx="1" fill="#2d3436"/>
+    <ellipse cx="0" cy="30" rx="13" ry="20" fill="url(#orange)" filter="url(#glow)"/>
+    <ellipse cx="-4" cy="22" rx="5" ry="9" fill="url(#glassShine)"/>
+    <path d="M -8,28 Q -6,24 -3,22" stroke="#ffffff" stroke-width="1.5" fill="none" opacity="0.7" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Purple bulb -->
+  <g transform="translate(200, 50)" filter="url(#outerGlow)">
+    <ellipse cx="0" cy="5" rx="4" ry="4" fill="#2d3436"/>
+    <rect x="-5" y="3" width="10" height="5" rx="1" fill="#2d3436"/>
+    <ellipse cx="0" cy="30" rx="13" ry="20" fill="url(#purple)" filter="url(#glow)"/>
+    <ellipse cx="-4" cy="22" rx="5" ry="9" fill="url(#glassShine)"/>
+    <path d="M -8,28 Q -6,24 -3,22" stroke="#ffffff" stroke-width="1.5" fill="none" opacity="0.7" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Pink bulb -->
+  <g transform="translate(235, 75)" filter="url(#outerGlow)">
+    <ellipse cx="0" cy="5" rx="4" ry="4" fill="#2d3436"/>
+    <rect x="-5" y="3" width="10" height="5" rx="1" fill="#2d3436"/>
+    <ellipse cx="0" cy="30" rx="13" ry="20" fill="url(#pink)" filter="url(#glow)"/>
+    <ellipse cx="-4" cy="22" rx="5" ry="9" fill="url(#glassShine)"/>
+    <path d="M -8,28 Q -6,24 -3,22" stroke="#ffffff" stroke-width="1.5" fill="none" opacity="0.7" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Cyan bulb -->
+  <g transform="translate(270, 50)" filter="url(#outerGlow)">
+    <ellipse cx="0" cy="5" rx="4" ry="4" fill="#2d3436"/>
+    <rect x="-5" y="3" width="10" height="5" rx="1" fill="#2d3436"/>
+    <ellipse cx="0" cy="30" rx="13" ry="20" fill="url(#cyan)" filter="url(#glow)"/>
+    <ellipse cx="-4" cy="22" rx="5" ry="9" fill="url(#glassShine)"/>
+    <path d="M -8,28 Q -6,24 -3,22" stroke="#ffffff" stroke-width="1.5" fill="none" opacity="0.7" stroke-linecap="round"/>
+  </g>
+</svg>
