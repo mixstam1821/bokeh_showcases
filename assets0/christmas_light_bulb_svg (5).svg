@@ -1,0 +1,341 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300" width="500" height="300">
+  <defs>
+    <!-- Mystical ethereal glow -->
+    <filter id="etherealGlow" height="500%" width="500%" x="-200%" y="-200%">
+      <feGaussianBlur stdDeviation="15" result="blur1"/>
+      <feGaussianBlur stdDeviation="8" result="blur2"/>
+      <feGaussianBlur stdDeviation="4" result="blur3"/>
+      <feColorMatrix in="blur1" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.6 0"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="blur3"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Energy particle glow -->
+    <filter id="particleGlow">
+      <feGaussianBlur stdDeviation="3"/>
+      <feColorMatrix type="matrix" values="1.2 0 0 0 0  0 1.2 0 0 0  0 0 1.2 0 0  0 0 0 1 0"/>
+    </filter>
+    
+    <!-- Swirling energy patterns -->
+    <radialGradient id="energySwirl1">
+      <stop offset="0%" style="stop-color:#ff6b6b;stop-opacity:0" />
+      <stop offset="40%" style="stop-color:#ee5a6f;stop-opacity:0.8" />
+      <stop offset="70%" style="stop-color:#c23616;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#4a1a1a;stop-opacity:0" />
+    </radialGradient>
+    
+    <radialGradient id="energySwirl2">
+      <stop offset="0%" style="stop-color:#48dbfb;stop-opacity:0" />
+      <stop offset="40%" style="stop-color:#0abde3;stop-opacity:0.8" />
+      <stop offset="70%" style="stop-color:#006494;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#001a2e;stop-opacity:0" />
+    </radialGradient>
+    
+    <radialGradient id="energySwirl3">
+      <stop offset="0%" style="stop-color:#ffeaa7;stop-opacity:0" />
+      <stop offset="40%" style="stop-color:#fdcb6e;stop-opacity:0.8" />
+      <stop offset="70%" style="stop-color:#e17055;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#4a2a1a;stop-opacity:0" />
+    </radialGradient>
+    
+    <radialGradient id="energySwirl4">
+      <stop offset="0%" style="stop-color:#55efc4;stop-opacity:0" />
+      <stop offset="40%" style="stop-color:#00b894;stop-opacity:0.8" />
+      <stop offset="70%" style="stop-color:#00695c;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#001a16;stop-opacity:0" />
+    </radialGradient>
+    
+    <radialGradient id="energySwirl5">
+      <stop offset="0%" style="stop-color:#a29bfe;stop-opacity:0" />
+      <stop offset="40%" style="stop-color:#6c5ce7;stop-opacity:0.8" />
+      <stop offset="70%" style="stop-color:#5f27cd;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#1a0a2e;stop-opacity:0" />
+    </radialGradient>
+    
+    <radialGradient id="energySwirl6">
+      <stop offset="0%" style="stop-color:#fd79a8;stop-opacity:0" />
+      <stop offset="40%" style="stop-color:#e84393;stop-opacity:0.8" />
+      <stop offset="70%" style="stop-color:#c0392b;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#2e1a1a;stop-opacity:0" />
+    </radialGradient>
+    
+    <!-- Glowing orb cores -->
+    <radialGradient id="orbCore1" cx="45%" cy="40%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="20%" style="stop-color:#ffe5e5;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#ff6b6b;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#c23616;stop-opacity:0.6" />
+    </radialGradient>
+    
+    <radialGradient id="orbCore2" cx="45%" cy="40%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="20%" style="stop-color:#e3f9ff;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#48dbfb;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#0abde3;stop-opacity:0.6" />
+    </radialGradient>
+    
+    <radialGradient id="orbCore3" cx="45%" cy="40%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="20%" style="stop-color:#fffef0;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#ffeaa7;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#fdcb6e;stop-opacity:0.6" />
+    </radialGradient>
+    
+    <radialGradient id="orbCore4" cx="45%" cy="40%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="20%" style="stop-color:#e8fff5;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#55efc4;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#00b894;stop-opacity:0.6" />
+    </radialGradient>
+    
+    <radialGradient id="orbCore5" cx="45%" cy="40%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="20%" style="stop-color:#f0edff;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#a29bfe;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#6c5ce7;stop-opacity:0.6" />
+    </radialGradient>
+    
+    <radialGradient id="orbCore6" cx="45%" cy="40%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="20%" style="stop-color:#ffe8f0;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#fd79a8;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#e84393;stop-opacity:0.6" />
+    </radialGradient>
+    
+    <!-- Glass sphere overlay -->
+    <radialGradient id="glassOverlay" cx="35%" cy="30%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.6" />
+      <stop offset="40%" style="stop-color:#ffffff;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0" />
+    </radialGradient>
+    
+    <!-- Ornate brass holder -->
+    <linearGradient id="brass" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#d4af37;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#aa8821;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8b6914;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Ornate golden chain -->
+  <path d="M 20,120 Q 70,90 120,120 T 220,120 T 320,120 T 420,120 T 480,120" 
+        stroke="#8b6914" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M 20,120 Q 70,90 120,120 T 220,120 T 320,120 T 420,120 T 480,120" 
+        stroke="#d4af37" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.8"/>
+  
+  <!-- Orb Lantern 1 - Red/Crimson -->
+  <g transform="translate(60, 115)" filter="url(#etherealGlow)">
+    <!-- Massive outer aura -->
+    <circle cx="0" cy="20" r="50" fill="url(#energySwirl1)" opacity="0.4"/>
+    <circle cx="0" cy="20" r="38" fill="url(#energySwirl1)" opacity="0.3"/>
+    
+    <!-- Brass ornate top -->
+    <path d="M -8,0 L -10,5 L -8,8 L 8,8 L 10,5 L 8,0 Z" fill="url(#brass)"/>
+    <circle cx="0" cy="-2" r="3" fill="#d4af37"/>
+    <ellipse cx="0" cy="8" rx="9" ry="3" fill="#8b6914"/>
+    
+    <!-- Main glowing orb -->
+    <circle cx="0" cy="20" r="28" fill="url(#orbCore1)"/>
+    
+    <!-- Energy swirl particles -->
+    <g opacity="0.7" filter="url(#particleGlow)">
+      <circle cx="-12" cy="12" r="2" fill="#ff6b6b"/>
+      <circle cx="15" cy="18" r="2.5" fill="#ffe5e5"/>
+      <circle cx="-8" cy="25" r="1.5" fill="#ff4757"/>
+      <circle cx="10" cy="28" r="2" fill="#ee5a6f"/>
+      <circle cx="-15" cy="20" r="1.8" fill="#c23616"/>
+      <circle cx="8" cy="15" r="2.2" fill="#ff8787"/>
+    </g>
+    
+    <!-- Swirling energy paths -->
+    <path d="M -15,15 Q -10,18 -5,20 T 5,24 T 15,25" 
+          stroke="#ff6b6b" stroke-width="1.5" fill="none" opacity="0.4" stroke-linecap="round"/>
+    <path d="M 15,10 Q 8,15 0,18 T -12,22" 
+          stroke="#ffe5e5" stroke-width="1.2" fill="none" opacity="0.5" stroke-linecap="round"/>
+    
+    <!-- Glass sphere highlight -->
+    <ellipse cx="-10" cy="12" rx="8" ry="12" fill="url(#glassOverlay)"/>
+    
+    <!-- Intense core -->
+    <circle cx="0" cy="20" r="8" fill="#ffffff" opacity="0.8"/>
+    <circle cx="0" cy="20" r="4" fill="#ffffff"/>
+    
+    <!-- Bottom brass cap -->
+    <ellipse cx="0" cy="48" rx="9" ry="3" fill="#8b6914"/>
+    <path d="M -8,48 L -6,52 L 6,52 L 8,48 Z" fill="url(#brass)"/>
+  </g>
+  
+  <!-- Orb Lantern 2 - Cyan/Azure -->
+  <g transform="translate(140, 85)" filter="url(#etherealGlow)">
+    <circle cx="0" cy="20" r="50" fill="url(#energySwirl2)" opacity="0.4"/>
+    <circle cx="0" cy="20" r="38" fill="url(#energySwirl2)" opacity="0.3"/>
+    
+    <path d="M -8,0 L -10,5 L -8,8 L 8,8 L 10,5 L 8,0 Z" fill="url(#brass)"/>
+    <circle cx="0" cy="-2" r="3" fill="#d4af37"/>
+    <ellipse cx="0" cy="8" rx="9" ry="3" fill="#8b6914"/>
+    
+    <circle cx="0" cy="20" r="28" fill="url(#orbCore2)"/>
+    
+    <g opacity="0.7" filter="url(#particleGlow)">
+      <circle cx="-12" cy="12" r="2" fill="#48dbfb"/>
+      <circle cx="15" cy="18" r="2.5" fill="#e3f9ff"/>
+      <circle cx="-8" cy="25" r="1.5" fill="#0abde3"/>
+      <circle cx="10" cy="28" r="2" fill="#74b9ff"/>
+      <circle cx="-15" cy="20" r="1.8" fill="#006494"/>
+      <circle cx="8" cy="15" r="2.2" fill="#a5d8ff"/>
+    </g>
+    
+    <path d="M -15,15 Q -10,18 -5,20 T 5,24 T 15,25" 
+          stroke="#48dbfb" stroke-width="1.5" fill="none" opacity="0.4" stroke-linecap="round"/>
+    <path d="M 15,10 Q 8,15 0,18 T -12,22" 
+          stroke="#e3f9ff" stroke-width="1.2" fill="none" opacity="0.5" stroke-linecap="round"/>
+    
+    <ellipse cx="-10" cy="12" rx="8" ry="12" fill="url(#glassOverlay)"/>
+    
+    <circle cx="0" cy="20" r="8" fill="#ffffff" opacity="0.8"/>
+    <circle cx="0" cy="20" r="4" fill="#ffffff"/>
+    
+    <ellipse cx="0" cy="48" rx="9" ry="3" fill="#8b6914"/>
+    <path d="M -8,48 L -6,52 L 6,52 L 8,48 Z" fill="url(#brass)"/>
+  </g>
+  
+  <!-- Orb Lantern 3 - Golden/Amber -->
+  <g transform="translate(220, 115)" filter="url(#etherealGlow)">
+    <circle cx="0" cy="20" r="50" fill="url(#energySwirl3)" opacity="0.4"/>
+    <circle cx="0" cy="20" r="38" fill="url(#energySwirl3)" opacity="0.3"/>
+    
+    <path d="M -8,0 L -10,5 L -8,8 L 8,8 L 10,5 L 8,0 Z" fill="url(#brass)"/>
+    <circle cx="0" cy="-2" r="3" fill="#d4af37"/>
+    <ellipse cx="0" cy="8" rx="9" ry="3" fill="#8b6914"/>
+    
+    <circle cx="0" cy="20" r="28" fill="url(#orbCore3)"/>
+    
+    <g opacity="0.7" filter="url(#particleGlow)">
+      <circle cx="-12" cy="12" r="2" fill="#ffeaa7"/>
+      <circle cx="15" cy="18" r="2.5" fill="#fffef0"/>
+      <circle cx="-8" cy="25" r="1.5" fill="#fdcb6e"/>
+      <circle cx="10" cy="28" r="2" fill="#ffed4e"/>
+      <circle cx="-15" cy="20" r="1.8" fill="#e17055"/>
+      <circle cx="8" cy="15" r="2.2" fill="#fff9db"/>
+    </g>
+    
+    <path d="M -15,15 Q -10,18 -5,20 T 5,24 T 15,25" 
+          stroke="#ffeaa7" stroke-width="1.5" fill="none" opacity="0.4" stroke-linecap="round"/>
+    <path d="M 15,10 Q 8,15 0,18 T -12,22" 
+          stroke="#fffef0" stroke-width="1.2" fill="none" opacity="0.5" stroke-linecap="round"/>
+    
+    <ellipse cx="-10" cy="12" rx="8" ry="12" fill="url(#glassOverlay)"/>
+    
+    <circle cx="0" cy="20" r="8" fill="#ffffff" opacity="0.8"/>
+    <circle cx="0" cy="20" r="4" fill="#ffffff"/>
+    
+    <ellipse cx="0" cy="48" rx="9" ry="3" fill="#8b6914"/>
+    <path d="M -8,48 L -6,52 L 6,52 L 8,48 Z" fill="url(#brass)"/>
+  </g>
+  
+  <!-- Orb Lantern 4 - Emerald/Mint -->
+  <g transform="translate(300, 85)" filter="url(#etherealGlow)">
+    <circle cx="0" cy="20" r="50" fill="url(#energySwirl4)" opacity="0.4"/>
+    <circle cx="0" cy="20" r="38" fill="url(#energySwirl4)" opacity="0.3"/>
+    
+    <path d="M -8,0 L -10,5 L -8,8 L 8,8 L 10,5 L 8,0 Z" fill="url(#brass)"/>
+    <circle cx="0" cy="-2" r="3" fill="#d4af37"/>
+    <ellipse cx="0" cy="8" rx="9" ry="3" fill="#8b6914"/>
+    
+    <circle cx="0" cy="20" r="28" fill="url(#orbCore4)"/>
+    
+    <g opacity="0.7" filter="url(#particleGlow)">
+      <circle cx="-12" cy="12" r="2" fill="#55efc4"/>
+      <circle cx="15" cy="18" r="2.5" fill="#e8fff5"/>
+      <circle cx="-8" cy="25" r="1.5" fill="#00b894"/>
+      <circle cx="10" cy="28" r="2" fill="#81ecec"/>
+      <circle cx="-15" cy="20" r="1.8" fill="#00695c"/>
+      <circle cx="8" cy="15" r="2.2" fill="#b2f2d7"/>
+    </g>
+    
+    <path d="M -15,15 Q -10,18 -5,20 T 5,24 T 15,25" 
+          stroke="#55efc4" stroke-width="1.5" fill="none" opacity="0.4" stroke-linecap="round"/>
+    <path d="M 15,10 Q 8,15 0,18 T -12,22" 
+          stroke="#e8fff5" stroke-width="1.2" fill="none" opacity="0.5" stroke-linecap="round"/>
+    
+    <ellipse cx="-10" cy="12" rx="8" ry="12" fill="url(#glassOverlay)"/>
+    
+    <circle cx="0" cy="20" r="8" fill="#ffffff" opacity="0.8"/>
+    <circle cx="0" cy="20" r="4" fill="#ffffff"/>
+    
+    <ellipse cx="0" cy="48" rx="9" ry="3" fill="#8b6914"/>
+    <path d="M -8,48 L -6,52 L 6,52 L 8,48 Z" fill="url(#brass)"/>
+  </g>
+  
+  <!-- Orb Lantern 5 - Purple/Lavender -->
+  <g transform="translate(380, 115)" filter="url(#etherealGlow)">
+    <circle cx="0" cy="20" r="50" fill="url(#energySwirl5)" opacity="0.4"/>
+    <circle cx="0" cy="20" r="38" fill="url(#energySwirl5)" opacity="0.3"/>
+    
+    <path d="M -8,0 L -10,5 L -8,8 L 8,8 L 10,5 L 8,0 Z" fill="url(#brass)"/>
+    <circle cx="0" cy="-2" r="3" fill="#d4af37"/>
+    <ellipse cx="0" cy="8" rx="9" ry="3" fill="#8b6914"/>
+    
+    <circle cx="0" cy="20" r="28" fill="url(#orbCore5)"/>
+    
+    <g opacity="0.7" filter="url(#particleGlow)">
+      <circle cx="-12" cy="12" r="2" fill="#a29bfe"/>
+      <circle cx="15" cy="18" r="2.5" fill="#f0edff"/>
+      <circle cx="-8" cy="25" r="1.5" fill="#6c5ce7"/>
+      <circle cx="10" cy="28" r="2" fill="#b19cd9"/>
+      <circle cx="-15" cy="20" r="1.8" fill="#5f27cd"/>
+      <circle cx="8" cy="15" r="2.2" fill="#dfe4ff"/>
+    </g>
+    
+    <path d="M -15,15 Q -10,18 -5,20 T 5,24 T 15,25" 
+          stroke="#a29bfe" stroke-width="1.5" fill="none" opacity="0.4" stroke-linecap="round"/>
+    <path d="M 15,10 Q 8,15 0,18 T -12,22" 
+          stroke="#f0edff" stroke-width="1.2" fill="none" opacity="0.5" stroke-linecap="round"/>
+    
+    <ellipse cx="-10" cy="12" rx="8" ry="12" fill="url(#glassOverlay)"/>
+    
+    <circle cx="0" cy="20" r="8" fill="#ffffff" opacity="0.8"/>
+    <circle cx="0" cy="20" r="4" fill="#ffffff"/>
+    
+    <ellipse cx="0" cy="48" rx="9" ry="3" fill="#8b6914"/>
+    <path d="M -8,48 L -6,52 L 6,52 L 8,48 Z" fill="url(#brass)"/>
+  </g>
+  
+  <!-- Orb Lantern 6 - Pink/Rose -->
+  <g transform="translate(460, 85)" filter="url(#etherealGlow)">
+    <circle cx="0" cy="20" r="50" fill="url(#energySwirl6)" opacity="0.4"/>
+    <circle cx="0" cy="20" r="38" fill="url(#energySwirl6)" opacity="0.3"/>
+    
+    <path d="M -8,0 L -10,5 L -8,8 L 8,8 L 10,5 L 8,0 Z" fill="url(#brass)"/>
+    <circle cx="0" cy="-2" r="3" fill="#d4af37"/>
+    <ellipse cx="0" cy="8" rx="9" ry="3" fill="#8b6914"/>
+    
+    <circle cx="0" cy="20" r="28" fill="url(#orbCore6)"/>
+    
+    <g opacity="0.7" filter="url(#particleGlow)">
+      <circle cx="-12" cy="12" r="2" fill="#fd79a8"/>
+      <circle cx="15" cy="18" r="2.5" fill="#ffe8f0"/>
+      <circle cx="-8" cy="25" r="1.5" fill="#e84393"/>
+      <circle cx="10" cy="28" r="2" fill="#ff8ac4"/>
+      <circle cx="-15" cy="20" r="1.8" fill="#c0392b"/>
+      <circle cx="8" cy="15" r="2.2" fill="#ffb3d9"/>
+    </g>
+    
+    <path d="M -15,15 Q -10,18 -5,20 T 5,24 T 15,25" 
+          stroke="#fd79a8" stroke-width="1.5" fill="none" opacity="0.4" stroke-linecap="round"/>
+    <path d="M 15,10 Q 8,15 0,18 T -12,22" 
+          stroke="#ffe8f0" stroke-width="1.2" fill="none" opacity="0.5" stroke-linecap="round"/>
+    
+    <ellipse cx="-10" cy="12" rx="8" ry="12" fill="url(#glassOverlay)"/>
+    
+    <circle cx="0" cy="20" r="8" fill="#ffffff" opacity="0.8"/>
+    <circle cx="0" cy="20" r="4" fill="#ffffff"/>
+    
+    <ellipse cx="0" cy="48" rx="9" ry="3" fill="#8b6914"/>
+    <path d="M -8,48 L -6,52 L 6,52 L 8,48 Z" fill="url(#brass)"/>
+  </g>
+</svg>

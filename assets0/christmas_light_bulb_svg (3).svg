@@ -1,0 +1,186 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" width="400" height="250">
+  <defs>
+    <!-- Warm vintage glow -->
+    <filter id="warmGlow" height="300%" width="300%" x="-100%" y="-100%">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feColorMatrix type="matrix" values="1 0 0 0 0  0 0.9 0 0 0  0 0 0.7 0 0  0 0 0 0.5 0"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Glass transparency effect -->
+    <radialGradient id="glassEffect">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.15" />
+      <stop offset="70%" style="stop-color:#ffd89b;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#19547b;stop-opacity:0.05" />
+    </radialGradient>
+    
+    <!-- Filament glow gradients -->
+    <radialGradient id="filamentGlow1" cx="50%" cy="50%">
+      <stop offset="0%" style="stop-color:#fff4e6;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#ffb347;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff6b35;stop-opacity:0.8" />
+    </radialGradient>
+    
+    <radialGradient id="filamentGlow2" cx="50%" cy="50%">
+      <stop offset="0%" style="stop-color:#fff9e6;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#ffd93d;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f9ca24;stop-opacity:0.8" />
+    </radialGradient>
+    
+    <radialGradient id="filamentGlow3" cx="50%" cy="50%">
+      <stop offset="0%" style="stop-color:#fff5f0;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#ffb88c;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff8b66;stop-opacity:0.8" />
+    </radialGradient>
+    
+    <radialGradient id="filamentGlow4" cx="50%" cy="50%">
+      <stop offset="0%" style="stop-color:#fffaf0;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#ffc875;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff9f43;stop-opacity:0.8" />
+    </radialGradient>
+    
+    <!-- Amber glass tint -->
+    <radialGradient id="amberGlass" cx="40%" cy="30%">
+      <stop offset="0%" style="stop-color:#fff9e6;stop-opacity:0.3" />
+      <stop offset="50%" style="stop-color:#ffd93d;stop-opacity:0.15" />
+      <stop offset="100%" style="stop-color:#f39c12;stop-opacity:0.25" />
+    </radialGradient>
+    
+    <!-- Bronze socket gradient -->
+    <linearGradient id="bronze" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#cd7f32;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#8b6914;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#654321;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Braided fabric cord -->
+  <path d="M 15,100 Q 55,70 95,100 T 175,100 T 255,100 T 335,100 T 385,100" 
+        stroke="#3d2817" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M 15,100 Q 55,70 95,100 T 175,100 T 255,100 T 335,100 T 385,100" 
+        stroke="#5c4033" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.7"/>
+  <path d="M 15,100 Q 55,70 95,100 T 175,100 T 255,100 T 335,100 T 385,100" 
+        stroke="#8b7355" stroke-width="2" fill="none" stroke-linecap="round" stroke-dasharray="3,3" opacity="0.5"/>
+  
+  <!-- Edison Bulb 1 - Orange filament -->
+  <g transform="translate(40, 95)" filter="url(#warmGlow)">
+    <!-- Outer glow aura -->
+    <ellipse cx="0" cy="25" rx="28" ry="38" fill="#ffb347" opacity="0.2"/>
+    <ellipse cx="0" cy="25" rx="22" ry="32" fill="#ff9f43" opacity="0.15"/>
+    
+    <!-- Bronze socket -->
+    <rect x="-8" y="0" width="16" height="12" rx="2" fill="url(#bronze)"/>
+    <rect x="-9" y="10" width="18" height="3" rx="1" fill="#654321"/>
+    <ellipse cx="0" cy="2" rx="8" ry="3" fill="#8b6914"/>
+    
+    <!-- Glass bulb -->
+    <ellipse cx="0" cy="25" rx="18" ry="28" fill="url(#amberGlass)"/>
+    <ellipse cx="0" cy="25" rx="18" ry="28" fill="url(#glassEffect)"/>
+    
+    <!-- Glowing filament -->
+    <ellipse cx="0" cy="25" rx="8" ry="12" fill="url(#filamentGlow1)"/>
+    <path d="M 0,15 Q -3,20 0,25 Q 3,30 0,35" stroke="#fff4e6" stroke-width="1.5" fill="none" opacity="0.9"/>
+    <circle cx="0" cy="25" r="3" fill="#ffffff" opacity="0.8"/>
+    
+    <!-- Glass shine -->
+    <ellipse cx="-8" cy="18" rx="4" ry="8" fill="#ffffff" opacity="0.25"/>
+  </g>
+  
+  <!-- Edison Bulb 2 - Golden yellow filament -->
+  <g transform="translate(100, 65)" filter="url(#warmGlow)">
+    <ellipse cx="0" cy="25" rx="28" ry="38" fill="#ffd93d" opacity="0.2"/>
+    <ellipse cx="0" cy="25" rx="22" ry="32" fill="#f9ca24" opacity="0.15"/>
+    
+    <rect x="-8" y="0" width="16" height="12" rx="2" fill="url(#bronze)"/>
+    <rect x="-9" y="10" width="18" height="3" rx="1" fill="#654321"/>
+    <ellipse cx="0" cy="2" rx="8" ry="3" fill="#8b6914"/>
+    
+    <ellipse cx="0" cy="25" rx="18" ry="28" fill="url(#amberGlass)"/>
+    <ellipse cx="0" cy="25" rx="18" ry="28" fill="url(#glassEffect)"/>
+    
+    <ellipse cx="0" cy="25" rx="8" ry="12" fill="url(#filamentGlow2)"/>
+    <path d="M 0,15 Q -3,20 0,25 Q 3,30 0,35" stroke="#fff9e6" stroke-width="1.5" fill="none" opacity="0.9"/>
+    <circle cx="0" cy="25" r="3" fill="#ffffff" opacity="0.8"/>
+    
+    <ellipse cx="-8" cy="18" rx="4" ry="8" fill="#ffffff" opacity="0.25"/>
+  </g>
+  
+  <!-- Edison Bulb 3 - Peachy orange -->
+  <g transform="translate(160, 95)" filter="url(#warmGlow)">
+    <ellipse cx="0" cy="25" rx="28" ry="38" fill="#ffb88c" opacity="0.2"/>
+    <ellipse cx="0" cy="25" rx="22" ry="32" fill="#ff8b66" opacity="0.15"/>
+    
+    <rect x="-8" y="0" width="16" height="12" rx="2" fill="url(#bronze)"/>
+    <rect x="-9" y="10" width="18" height="3" rx="1" fill="#654321"/>
+    <ellipse cx="0" cy="2" rx="8" ry="3" fill="#8b6914"/>
+    
+    <ellipse cx="0" cy="25" rx="18" ry="28" fill="url(#amberGlass)"/>
+    <ellipse cx="0" cy="25" rx="18" ry="28" fill="url(#glassEffect)"/>
+    
+    <ellipse cx="0" cy="25" rx="8" ry="12" fill="url(#filamentGlow3)"/>
+    <path d="M 0,15 Q -3,20 0,25 Q 3,30 0,35" stroke="#fff5f0" stroke-width="1.5" fill="none" opacity="0.9"/>
+    <circle cx="0" cy="25" r="3" fill="#ffffff" opacity="0.8"/>
+    
+    <ellipse cx="-8" cy="18" rx="4" ry="8" fill="#ffffff" opacity="0.25"/>
+  </g>
+  
+  <!-- Edison Bulb 4 - Amber gold -->
+  <g transform="translate(220, 65)" filter="url(#warmGlow)">
+    <ellipse cx="0" cy="25" rx="28" ry="38" fill="#ffc875" opacity="0.2"/>
+    <ellipse cx="0" cy="25" rx="22" ry="32" fill="#ff9f43" opacity="0.15"/>
+    
+    <rect x="-8" y="0" width="16" height="12" rx="2" fill="url(#bronze)"/>
+    <rect x="-9" y="10" width="18" height="3" rx="1" fill="#654321"/>
+    <ellipse cx="0" cy="2" rx="8" ry="3" fill="#8b6914"/>
+    
+    <ellipse cx="0" cy="25" rx="18" ry="28" fill="url(#amberGlass)"/>
+    <ellipse cx="0" cy="25" rx="18" ry="28" fill="url(#glassEffect)"/>
+    
+    <ellipse cx="0" cy="25" rx="8" ry="12" fill="url(#filamentGlow4)"/>
+    <path d="M 0,15 Q -3,20 0,25 Q 3,30 0,35" stroke="#fffaf0" stroke-width="1.5" fill="none" opacity="0.9"/>
+    <circle cx="0" cy="25" r="3" fill="#ffffff" opacity="0.8"/>
+    
+    <ellipse cx="-8" cy="18" rx="4" ry="8" fill="#ffffff" opacity="0.25"/>
+  </g>
+  
+  <!-- Edison Bulb 5 - Deep orange -->
+  <g transform="translate(280, 95)" filter="url(#warmGlow)">
+    <ellipse cx="0" cy="25" rx="28" ry="38" fill="#ffb347" opacity="0.2"/>
+    <ellipse cx="0" cy="25" rx="22" ry="32" fill="#ff6b35" opacity="0.15"/>
+    
+    <rect x="-8" y="0" width="16" height="12" rx="2" fill="url(#bronze)"/>
+    <rect x="-9" y="10" width="18" height="3" rx="1" fill="#654321"/>
+    <ellipse cx="0" cy="2" rx="8" ry="3" fill="#8b6914"/>
+    
+    <ellipse cx="0" cy="25" rx="18" ry="28" fill="url(#amberGlass)"/>
+    <ellipse cx="0" cy="25" rx="18" ry="28" fill="url(#glassEffect)"/>
+    
+    <ellipse cx="0" cy="25" rx="8" ry="12" fill="url(#filamentGlow1)"/>
+    <path d="M 0,15 Q -3,20 0,25 Q 3,30 0,35" stroke="#fff4e6" stroke-width="1.5" fill="none" opacity="0.9"/>
+    <circle cx="0" cy="25" r="3" fill="#ffffff" opacity="0.8"/>
+    
+    <ellipse cx="-8" cy="18" rx="4" ry="8" fill="#ffffff" opacity="0.25"/>
+  </g>
+  
+  <!-- Edison Bulb 6 - Bright golden -->
+  <g transform="translate(340, 65)" filter="url(#warmGlow)">
+    <ellipse cx="0" cy="25" rx="28" ry="38" fill="#ffd93d" opacity="0.2"/>
+    <ellipse cx="0" cy="25" rx="22" ry="32" fill="#f9ca24" opacity="0.15"/>
+    
+    <rect x="-8" y="0" width="16" height="12" rx="2" fill="url(#bronze)"/>
+    <rect x="-9" y="10" width="18" height="3" rx="1" fill="#654321"/>
+    <ellipse cx="0" cy="2" rx="8" ry="3" fill="#8b6914"/>
+    
+    <ellipse cx="0" cy="25" rx="18" ry="28" fill="url(#amberGlass)"/>
+    <ellipse cx="0" cy="25" rx="18" ry="28" fill="url(#glassEffect)"/>
+    
+    <ellipse cx="0" cy="25" rx="8" ry="12" fill="url(#filamentGlow2)"/>
+    <path d="M 0,15 Q -3,20 0,25 Q 3,30 0,35" stroke="#fff9e6" stroke-width="1.5" fill="none" opacity="0.9"/>
+    <circle cx="0" cy="25" r="3" fill="#ffffff" opacity="0.8"/>
+    
+    <ellipse cx="-8" cy="18" rx="4" ry="8" fill="#ffffff" opacity="0.25"/>
+  </g>
+</svg>

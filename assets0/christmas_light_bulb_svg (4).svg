@@ -1,0 +1,283 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 280" width="450" height="280">
+  <defs>
+    <!-- Ultra-realistic crystal glow with multiple layers -->
+    <filter id="crystalGlow" height="400%" width="400%" x="-150%" y="-150%">
+      <feGaussianBlur stdDeviation="10" result="blur1"/>
+      <feGaussianBlur stdDeviation="5" result="blur2"/>
+      <feGaussianBlur stdDeviation="2" result="blur3"/>
+      <feMerge>
+        <feMergeNode in="blur1"/>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="blur3"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Diamond sparkle effect -->
+    <filter id="diamondSparkle">
+      <feGaussianBlur stdDeviation="1" result="softGlow"/>
+      <feColorMatrix type="matrix" values="1.5 0 0 0 0  0 1.5 0 0 0  0 0 1.5 0 0  0 0 0 1 0"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Prismatic rainbow refraction -->
+    <linearGradient id="prism1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6b9d;stop-opacity:0.9" />
+      <stop offset="25%" style="stop-color:#c44569;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#786fa6;stop-opacity:1" />
+      <stop offset="75%" style="stop-color:#4b7bec;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0fb9b1;stop-opacity:0.9" />
+    </linearGradient>
+    
+    <linearGradient id="prism2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#a8e6cf;stop-opacity:0.9" />
+      <stop offset="25%" style="stop-color:#3dc1d3;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#6c5ce7;stop-opacity:1" />
+      <stop offset="75%" style="stop-color:#fd79a8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fdcb6e;stop-opacity:0.9" />
+    </linearGradient>
+    
+    <linearGradient id="prism3" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffeaa7;stop-opacity:0.9" />
+      <stop offset="25%" style="stop-color:#fab1a0;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#ff7675;stop-opacity:1" />
+      <stop offset="75%" style="stop-color:#a29bfe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#74b9ff;stop-opacity:0.9" />
+    </linearGradient>
+    
+    <linearGradient id="prism4" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#55efc4;stop-opacity:0.9" />
+      <stop offset="25%" style="stop-color:#81ecec;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#a29bfe;stop-opacity:1" />
+      <stop offset="75%" style="stop-color:#fd79a8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fdcb6e;stop-opacity:0.9" />
+    </linearGradient>
+    
+    <!-- Ice crystal facets -->
+    <radialGradient id="iceFacet">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.95" />
+      <stop offset="40%" style="stop-color:#e3f2fd;stop-opacity:0.7" />
+      <stop offset="100%" style="stop-color:#90caf9;stop-opacity:0.4" />
+    </radialGradient>
+    
+    <!-- Inner LED core glow -->
+    <radialGradient id="ledCore1" cx="50%" cy="30%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#ff6b9d;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c44569;stop-opacity:0.8" />
+    </radialGradient>
+    
+    <radialGradient id="ledCore2" cx="50%" cy="30%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#a8e6cf;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3dc1d3;stop-opacity:0.8" />
+    </radialGradient>
+    
+    <radialGradient id="ledCore3" cx="50%" cy="30%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#ffeaa7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fdcb6e;stop-opacity:0.8" />
+    </radialGradient>
+    
+    <radialGradient id="ledCore4" cx="50%" cy="30%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#74b9ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0984e3;stop-opacity:0.8" />
+    </radialGradient>
+    
+    <!-- Transparent crystal overlay -->
+    <radialGradient id="crystal">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.4" />
+      <stop offset="50%" style="stop-color:#e1f5fe;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#81d4fa;stop-opacity:0.1" />
+    </radialGradient>
+    
+    <!-- Metallic silver cap -->
+    <linearGradient id="silverCap" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f5f5f5;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#9e9e9e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#616161;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Premium silver wire with depth -->
+  <path d="M 15,110 Q 60,80 105,110 T 195,110 T 285,110 T 375,110 T 435,110" 
+        stroke="#424242" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <path d="M 15,110 Q 60,80 105,110 T 195,110 T 285,110 T 375,110 T 435,110" 
+        stroke="#757575" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.8"/>
+  <path d="M 15,110 Q 60,80 105,110 T 195,110 T 285,110 T 375,110 T 435,110" 
+        stroke="#bdbdbd" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.5"/>
+  
+  <!-- Crystal Icicle 1 - Pink/Purple Prism -->
+  <g transform="translate(50, 105)" filter="url(#crystalGlow)">
+    <!-- Outer prismatic aura -->
+    <ellipse cx="0" cy="35" rx="35" ry="50" fill="url(#prism1)" opacity="0.25"/>
+    <ellipse cx="0" cy="35" rx="28" ry="42" fill="url(#prism1)" opacity="0.2"/>
+    
+    <!-- Silver cap -->
+    <rect x="-10" y="0" width="20" height="8" rx="2" fill="url(#silverCap)"/>
+    <ellipse cx="0" cy="1" rx="10" ry="3" fill="#e0e0e0"/>
+    <rect x="-11" y="7" width="22" height="2" rx="1" fill="#757575"/>
+    
+    <!-- Crystal icicle body with facets -->
+    <path d="M -12,8 L -8,15 L -5,30 L -3,45 L 0,65 L 3,45 L 5,30 L 8,15 L 12,8 Z" 
+          fill="url(#crystal)" stroke="#e1f5fe" stroke-width="0.5"/>
+    
+    <!-- Inner LED glow -->
+    <ellipse cx="0" cy="30" rx="10" ry="18" fill="url(#ledCore1)"/>
+    
+    <!-- Prismatic refraction layer -->
+    <path d="M -10,10 L -6,20 L -4,35 L -2,50 L 0,60 L 2,50 L 4,35 L 6,20 L 10,10 Z" 
+          fill="url(#prism1)" opacity="0.6"/>
+    
+    <!-- Ice facet highlights -->
+    <ellipse cx="-5" cy="20" rx="3" ry="8" fill="url(#iceFacet)" filter="url(#diamondSparkle)"/>
+    <ellipse cx="6" cy="35" rx="2" ry="6" fill="#ffffff" opacity="0.8"/>
+    
+    <!-- Bright core -->
+    <ellipse cx="0" cy="30" rx="4" ry="8" fill="#ffffff" opacity="0.9"/>
+    
+    <!-- Sparkle lines -->
+    <line x1="0" y1="8" x2="0" y2="3" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity="0.9"/>
+    <line x1="-7" y1="12" x2="-11" y2="10" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+    <line x1="7" y1="12" x2="11" y2="10" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+  </g>
+  
+  <!-- Crystal Icicle 2 - Turquoise/Mint Prism -->
+  <g transform="translate(120, 75)" filter="url(#crystalGlow)">
+    <ellipse cx="0" cy="35" rx="35" ry="50" fill="url(#prism2)" opacity="0.25"/>
+    <ellipse cx="0" cy="35" rx="28" ry="42" fill="url(#prism2)" opacity="0.2"/>
+    
+    <rect x="-10" y="0" width="20" height="8" rx="2" fill="url(#silverCap)"/>
+    <ellipse cx="0" cy="1" rx="10" ry="3" fill="#e0e0e0"/>
+    <rect x="-11" y="7" width="22" height="2" rx="1" fill="#757575"/>
+    
+    <path d="M -12,8 L -8,15 L -5,30 L -3,45 L 0,65 L 3,45 L 5,30 L 8,15 L 12,8 Z" 
+          fill="url(#crystal)" stroke="#e1f5fe" stroke-width="0.5"/>
+    
+    <ellipse cx="0" cy="30" rx="10" ry="18" fill="url(#ledCore2)"/>
+    
+    <path d="M -10,10 L -6,20 L -4,35 L -2,50 L 0,60 L 2,50 L 4,35 L 6,20 L 10,10 Z" 
+          fill="url(#prism2)" opacity="0.6"/>
+    
+    <ellipse cx="-5" cy="20" rx="3" ry="8" fill="url(#iceFacet)" filter="url(#diamondSparkle)"/>
+    <ellipse cx="6" cy="35" rx="2" ry="6" fill="#ffffff" opacity="0.8"/>
+    
+    <ellipse cx="0" cy="30" rx="4" ry="8" fill="#ffffff" opacity="0.9"/>
+    
+    <line x1="0" y1="8" x2="0" y2="3" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity="0.9"/>
+    <line x1="-7" y1="12" x2="-11" y2="10" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+    <line x1="7" y1="12" x2="11" y2="10" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+  </g>
+  
+  <!-- Crystal Icicle 3 - Warm Golden/Peach Prism -->
+  <g transform="translate(190, 105)" filter="url(#crystalGlow)">
+    <ellipse cx="0" cy="35" rx="35" ry="50" fill="url(#prism3)" opacity="0.25"/>
+    <ellipse cx="0" cy="35" rx="28" ry="42" fill="url(#prism3)" opacity="0.2"/>
+    
+    <rect x="-10" y="0" width="20" height="8" rx="2" fill="url(#silverCap)"/>
+    <ellipse cx="0" cy="1" rx="10" ry="3" fill="#e0e0e0"/>
+    <rect x="-11" y="7" width="22" height="2" rx="1" fill="#757575"/>
+    
+    <path d="M -12,8 L -8,15 L -5,30 L -3,45 L 0,65 L 3,45 L 5,30 L 8,15 L 12,8 Z" 
+          fill="url(#crystal)" stroke="#e1f5fe" stroke-width="0.5"/>
+    
+    <ellipse cx="0" cy="30" rx="10" ry="18" fill="url(#ledCore3)"/>
+    
+    <path d="M -10,10 L -6,20 L -4,35 L -2,50 L 0,60 L 2,50 L 4,35 L 6,20 L 10,10 Z" 
+          fill="url(#prism3)" opacity="0.6"/>
+    
+    <ellipse cx="-5" cy="20" rx="3" ry="8" fill="url(#iceFacet)" filter="url(#diamondSparkle)"/>
+    <ellipse cx="6" cy="35" rx="2" ry="6" fill="#ffffff" opacity="0.8"/>
+    
+    <ellipse cx="0" cy="30" rx="4" ry="8" fill="#ffffff" opacity="0.9"/>
+    
+    <line x1="0" y1="8" x2="0" y2="3" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity="0.9"/>
+    <line x1="-7" y1="12" x2="-11" y2="10" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+    <line x1="7" y1="12" x2="11" y2="10" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+  </g>
+  
+  <!-- Crystal Icicle 4 - Cool Blue Prism -->
+  <g transform="translate(260, 75)" filter="url(#crystalGlow)">
+    <ellipse cx="0" cy="35" rx="35" ry="50" fill="url(#prism4)" opacity="0.25"/>
+    <ellipse cx="0" cy="35" rx="28" ry="42" fill="url(#prism4)" opacity="0.2"/>
+    
+    <rect x="-10" y="0" width="20" height="8" rx="2" fill="url(#silverCap)"/>
+    <ellipse cx="0" cy="1" rx="10" ry="3" fill="#e0e0e0"/>
+    <rect x="-11" y="7" width="22" height="2" rx="1" fill="#757575"/>
+    
+    <path d="M -12,8 L -8,15 L -5,30 L -3,45 L 0,65 L 3,45 L 5,30 L 8,15 L 12,8 Z" 
+          fill="url(#crystal)" stroke="#e1f5fe" stroke-width="0.5"/>
+    
+    <ellipse cx="0" cy="30" rx="10" ry="18" fill="url(#ledCore4)"/>
+    
+    <path d="M -10,10 L -6,20 L -4,35 L -2,50 L 0,60 L 2,50 L 4,35 L 6,20 L 10,10 Z" 
+          fill="url(#prism4)" opacity="0.6"/>
+    
+    <ellipse cx="-5" cy="20" rx="3" ry="8" fill="url(#iceFacet)" filter="url(#diamondSparkle)"/>
+    <ellipse cx="6" cy="35" rx="2" ry="6" fill="#ffffff" opacity="0.8"/>
+    
+    <ellipse cx="0" cy="30" rx="4" ry="8" fill="#ffffff" opacity="0.9"/>
+    
+    <line x1="0" y1="8" x2="0" y2="3" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity="0.9"/>
+    <line x1="-7" y1="12" x2="-11" y2="10" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+    <line x1="7" y1="12" x2="11" y2="10" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+  </g>
+  
+  <!-- Crystal Icicle 5 - Pink Prism -->
+  <g transform="translate(330, 105)" filter="url(#crystalGlow)">
+    <ellipse cx="0" cy="35" rx="35" ry="50" fill="url(#prism1)" opacity="0.25"/>
+    <ellipse cx="0" cy="35" rx="28" ry="42" fill="url(#prism1)" opacity="0.2"/>
+    
+    <rect x="-10" y="0" width="20" height="8" rx="2" fill="url(#silverCap)"/>
+    <ellipse cx="0" cy="1" rx="10" ry="3" fill="#e0e0e0"/>
+    <rect x="-11" y="7" width="22" height="2" rx="1" fill="#757575"/>
+    
+    <path d="M -12,8 L -8,15 L -5,30 L -3,45 L 0,65 L 3,45 L 5,30 L 8,15 L 12,8 Z" 
+          fill="url(#crystal)" stroke="#e1f5fe" stroke-width="0.5"/>
+    
+    <ellipse cx="0" cy="30" rx="10" ry="18" fill="url(#ledCore1)"/>
+    
+    <path d="M -10,10 L -6,20 L -4,35 L -2,50 L 0,60 L 2,50 L 4,35 L 6,20 L 10,10 Z" 
+          fill="url(#prism1)" opacity="0.6"/>
+    
+    <ellipse cx="-5" cy="20" rx="3" ry="8" fill="url(#iceFacet)" filter="url(#diamondSparkle)"/>
+    <ellipse cx="6" cy="35" rx="2" ry="6" fill="#ffffff" opacity="0.8"/>
+    
+    <ellipse cx="0" cy="30" rx="4" ry="8" fill="#ffffff" opacity="0.9"/>
+    
+    <line x1="0" y1="8" x2="0" y2="3" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity="0.9"/>
+    <line x1="-7" y1="12" x2="-11" y2="10" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+    <line x1="7" y1="12" x2="11" y2="10" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+  </g>
+  
+  <!-- Crystal Icicle 6 - Turquoise Prism -->
+  <g transform="translate(400, 75)" filter="url(#crystalGlow)">
+    <ellipse cx="0" cy="35" rx="35" ry="50" fill="url(#prism2)" opacity="0.25"/>
+    <ellipse cx="0" cy="35" rx="28" ry="42" fill="url(#prism2)" opacity="0.2"/>
+    
+    <rect x="-10" y="0" width="20" height="8" rx="2" fill="url(#silverCap)"/>
+    <ellipse cx="0" cy="1" rx="10" ry="3" fill="#e0e0e0"/>
+    <rect x="-11" y="7" width="22" height="2" rx="1" fill="#757575"/>
+    
+    <path d="M -12,8 L -8,15 L -5,30 L -3,45 L 0,65 L 3,45 L 5,30 L 8,15 L 12,8 Z" 
+          fill="url(#crystal)" stroke="#e1f5fe" stroke-width="0.5"/>
+    
+    <ellipse cx="0" cy="30" rx="10" ry="18" fill="url(#ledCore2)"/>
+    
+    <path d="M -10,10 L -6,20 L -4,35 L -2,50 L 0,60 L 2,50 L 4,35 L 6,20 L 10,10 Z" 
+          fill="url(#prism2)" opacity="0.6"/>
+    
+    <ellipse cx="-5" cy="20" rx="3" ry="8" fill="url(#iceFacet)" filter="url(#diamondSparkle)"/>
+    <ellipse cx="6" cy="35" rx="2" ry="6" fill="#ffffff" opacity="0.8"/>
+    
+    <ellipse cx="0" cy="30" rx="4" ry="8" fill="#ffffff" opacity="0.9"/>
+    
+    <line x1="0" y1="8" x2="0" y2="3" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity="0.9"/>
+    <line x1="-7" y1="12" x2="-11" y2="10" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+    <line x1="7" y1="12" x2="11" y2="10" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+  </g>
+</svg>
